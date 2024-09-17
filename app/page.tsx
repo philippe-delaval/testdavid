@@ -32,7 +32,7 @@ export default function Home() {
           quote="Template de configuration d'un projet Next.Js avec Typescript, ESLint, Prettier, Husky, Docker, scopes de commit personnalisés et Lint Staged."
           author="Drondiodev"
         />
-        <TextBlock text="Ceci est un bloc de texte stylisé pour tester une modification." />
+        <TextBlock text="Je test ton projet." />
         <Link
           className="flex items-center rounded-md bg-red-500/15 mt-5 px-2 py-0.5 gap-3 text-red-500 text-sm"
           href="https://github.com/drondiodev/nextjs14cicd"
