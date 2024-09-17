@@ -1,7 +1,20 @@
 {
+  "env": {
+    "node": true,
+    "es2021": true,
+    "browser": true
+  },
+  "globals": {
+    "React": true
+  },
   "extends": ["eslint:recommended", "next", "next/core-web-vitals", "prettier"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
   }
 }
