@@ -1,4 +1,28 @@
 import Link from 'next/link';
+import React from 'react';
+
+interface TextBlockProps {
+  text: string;
+}
+
+const TextBlock: React.FC<TextBlockProps> = ({ text }) => {
+  return (
+    <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white mt-4 p-6 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+      <p className="text-xl font-semibold">{text}</p>
+    </div>
+  );
+};
+
+const BlockQuote = ({ quote, author }: { quote: string; author: string }) => {
+  return (
+    <blockquote className="bg-gray-500/15 text-gray-700 dark:bg-gray-500/10 dark:text-blue-400 border-l-4 border-r-4 border-blue-500/70 py-2 px-4 rounded-xl">
+      <p className="inline italic">{quote}</p>
+      <p className="text-sm text-end tracking-tighter italic font-semibold mt-1.5">
+        {author}
+      </p>
+    </blockquote>
+  );
+};
 
 export default function Home() {
   return (
@@ -8,6 +32,7 @@ export default function Home() {
           quote="Template de configuration d'un projet Next.Js avec Typescript, ESLint, Prettier, Husky, Docker, scopes de commit personnalisés et Lint Staged."
           author="Drondiodev"
         />
+        <TextBlock text="Ceci est un bloc de texte stylisé pour tester une modification." />
         <Link
           className="flex items-center rounded-md bg-red-500/15 mt-5 px-2 py-0.5 gap-3 text-red-500 text-sm"
           href="https://github.com/drondiodev/nextjs14cicd"
@@ -37,14 +62,3 @@ export default function Home() {
     </section>
   );
 }
-
-const BlockQuote = ({ quote, author }: { quote: string; author: string }) => {
-  return (
-    <blockquote className="bg-gray-500/15 text-gray-700 dark:bg-gray-500/10 dark:text-blue-400 border-l-4 border-r-4 border-blue-500/70 py-2 px-4 rounded-xl">
-      <p className="inline italic">{quote}</p>
-      <p className="text-sm text-end tracking-tighter italic font-semibold mt-1.5">
-        {author}
-      </p>
-    </blockquote>
-  );
-};
