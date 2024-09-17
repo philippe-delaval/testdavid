@@ -29,6 +29,12 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Build Docker image
+        run: docker build -t nextjs14cicd:latest .
+
+      - name: Run Docker container
+        run: docker run -d -p 3000:3000 nextjs14cicd:latest
+
       - name: Placeholder for future deployment steps
         run: |
           echo "Deployment steps will be added here in the future."

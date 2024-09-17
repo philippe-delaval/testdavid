@@ -1,13 +1,5 @@
 name: Continuous Integration
 
-# this is trigger CI on push and PR for main branch only
-# on:
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
-
-# this is trigger CI on all kinds of branches and PRs
 on:
   push:
   pull_request:
@@ -41,3 +33,9 @@ jobs:
         uses: wagoid/commitlint-github-action@v5
         with:
           configFile: commitlint.config.cjs
+
+      - name: Build Docker image
+        run: docker build -t nextjs14cicd:latest .
+
+      - name: Run Docker container
+        run: docker run -d -p 3000:3000 nextjs14cicd:latest
