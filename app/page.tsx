@@ -4,17 +4,12 @@ export default function Home() {
   return (
     <section className="py-14">
       <div className="flex flex-col justify-center items-center mx-auto px-4 md:px-8">
-        <h1 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-          Next.js Starter template
-        </h1>
-        <p className="mt-3 text-gray-600">
-          Template de configuration d&apos;un projet Next.Js avec Typescript,
-          ESLint, Prettier, Husky, Docker, scopes de commit personnalisés et
-          Lint Staged.
-        </p>
+        <BlockQuote
+          quote="Template de configuration d'un projet Next.Js avec Typescript, ESLint, Prettier, Husky, Docker, scopes de commit personnalisés et Lint Staged."
+          author="Drondiodev"
+        />
         <Link
-          className="mt-5 inline-flex gap-2 cursor-pointer items-center justify-center font-medium px-3 rounded-md bg-slate-200/15 hover:bg-slate-300"
-          data-rac=""
+          className="flex items-center rounded-md bg-red-500/15 mt-5 px-2 py-0.5 gap-3 text-red-500 text-sm"
           href="https://github.com/drondiodev/nextjs14cicd"
           target="_blank"
         >
@@ -37,23 +32,19 @@ export default function Home() {
             <path d="M17 19h4" />
           </svg>
           <span className="truncate">Donner une étoile au répo </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-arrow-right "
-          >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
         </Link>
       </div>
     </section>
   );
 }
+
+const BlockQuote = ({ quote, author }: { quote: string; author: string }) => {
+  return (
+    <blockquote className="bg-gray-500/15 text-gray-700 dark:bg-gray-500/10 dark:text-blue-400 border-l-4 border-r-4 border-blue-500/70 py-2 px-4 rounded-xl">
+      <p className="inline italic">{quote}</p>
+      <p className="text-sm text-end tracking-tighter italic font-semibold mt-1.5">
+        {author}
+      </p>
+    </blockquote>
+  );
+};
