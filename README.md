@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Drondiodev-template-starter
 
-## Getting Started
+![](https://visitor-badge.laobi.icu/badge?page_id=drondiodev.nextjs14cicd)
 
-First, run the development server:
+# Drondiodev-template
+
+![GitHub last commit](https://img.shields.io/github/last-commit/drondiodev/Drondiodev-template)
+![GitHub forks](https://img.shields.io/github/forks/drondiodev/nextjs14cicd)
+![GitHub Repo stars](https://img.shields.io/github/stars/drondiodev/nextjs14cicd)
+![GitHub watchers](https://img.shields.io/github/watchers/drondiodev/nextjs14cicd)
+
+nextjs14cicd est un template Next.js prêt à l'emploi, conçu pour vous permettre
+de démarrer rapidement le développement de votre nouvelle application web. Il
+intègre les meilleures pratiques et les dernières fonctionnalités de Next.js,
+ainsi que des outils de développement essentiels pour améliorer votre
+productivité.
+
+## Fonctionnalités
+
+### Technologies et bibliothèques
+
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Typescript](https://img.shields.io/badge/Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)
+![React](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)
+
+- **Next.js 14** avec App Router : Bénéficiez des dernières fonctionnalités et
+  améliorations de performances de Next.js, notamment le nouveau système de mise
+  en page (`app/`), le rendu côté serveur et la navigation de fichiers.
+- **Typescript** : Un support complet de TypeScript pour un code plus robuste et
+  plus facilement maintenable.
+- **Tailwind CSS** : Une configuration préconfigurée de Tailwind CSS pour une
+  stylisation moderne et réactive de vos composants.
+- **ESLint et Prettier** : Des outils de lint et de formatage de code
+  préconfigurés pour maintenir une base de code cohérente et lisible.
+- **Husky et Lint-Staged** : Des hooks de Git pour exécuter automatiquement les
+  vérifications de lint et de formatage avant chaque commit.
+- **Docker** :
+
+## Utilisation
+
+1. Clonez le dépôt :
+
+Créer un nouveau repository à part du lien "utiliser ce template" puis
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone 'lien de votre nouveau repo'
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Merci de préférer cette façon de faire, afin de faire connaître le template.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ou
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+En utilisant `create-next-app` :
 
-## Learn More
+```bash
+pnpm create next-app  -e https://github.com/drondiodev/nextjs14cicd ts-pnpm
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Accédez au répertoire du projet :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+cd 'nom de votre repo'
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Installez les dépendances du projet avec pnpm :
 
-## Deploy on Vercel
+```bash
+pnpm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Démarrez le serveur de développement :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm dev
+```
+
+Votre application Next.js sera alors accessible à l'adresse
+http://localhost:3000.
+
+5. Faites vos modifications puis :
+
+```bash
+git add -A
+pnpm commit
+```
+
+Puis laisser vous guider en suivant les instructions dans le terminal
+
+```bash
+git push
+```
